@@ -1,0 +1,336 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+a {
+    color: #D41B2C;
+}
+
+/* ---------- UTILS ---------- */
+
+.overflow-ellipses {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kanbas-link {
+    text-decoration: none;
+    color: #D41B2C !important;
+}
+
+.kanbas-link:hover {
+    text-decoration: underline;
+}
+
+.kanbas-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+/* ---------- BOOTSTRAP OVERRIDES ---------- */
+
+/* .list-group-item--sublist li {
+    padding-left: 2em;
+} */
+
+.list-group-item {
+    overflow: hidden;
+}
+
+.list-group-item--header {
+    background: #f5f5f5;
+}
+
+/* Source: https://stackoverflow.com/a/31271393 */
+
+.list-group-collapse li > ul li:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-collapse li > ul {
+    padding: 0;
+    margin-left: -17px;
+    margin-right: -17px;
+    margin-top: -11px;
+    margin-bottom: -9px;
+}
+
+/* ---------- PRIMARY NAVIGATION ---------- */
+
+.primary-nav {
+    position: fixed;
+    min-height: 100vh;
+    height: auto;
+    background: #000;
+    max-width: 85px;
+    min-width: 85px;
+    z-index: 9999;
+}
+
+.primary-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 85px;
+    background: #000;
+}
+
+.primary-nav__item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-nav__item--active {
+    background: #FFF;
+}
+
+.primary-nav__item a {
+    text-decoration: none;
+}
+
+.primary-nav__item i {
+    line-height: 1;
+    color: #D41B2C;
+}
+
+.primary-nav__item .primary-nav__account-icon {
+    color: #FFFFFF;
+}
+
+.primary-nav__item--active .primary-nav__account-icon {
+    color: #D41B2C;
+}
+
+.primary-nav__item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #FFF;
+    font-weight: 200;
+    padding: 8px;
+    font-size: 0.85em;
+}
+
+.primary-nav__item--active .primary-nav__item-content {
+    color: #D41B2C;
+}
+
+.primary-nav-padding {
+    max-width: 85px;
+    width: 85px;
+    min-width: 85px;
+}
+
+/* ---------- MOBILE NAVIGATION ---------- */
+
+.mobile-navbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #FFF;
+}
+
+.mobile-navbar__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.mobile-navbar__dropdown {
+    position: relative;
+    background-color: #FFF;
+    border: none;
+    border-radius: 0;
+}
+
+.mobile-navbar .navbar-toggler:not(.collapsed) .collapsed-hidden {
+    display: block;
+}
+
+.mobile-navbar .navbar-toggler.collapsed .collapsed-hidden {
+    display: none;
+}
+
+.mobile-navbar .navbar-toggler:not(.collapsed) .collapsed-visible {
+    display: none;
+}
+
+.mobile-navbar .navbar-toggler.collapsed .collapsed-visible {
+    display: block;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+}
+
+/* ---------- SIDEBAR NAVIGATION ---------- */
+
+.sidebar-nav {
+    max-width: 200px;
+    min-width: 190px;
+}
+
+.sidebar-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 24px;
+}
+
+.sidebar-nav__item {
+    list-style: none;
+    padding: 9px 0 9px 9px;
+    margin: 0;
+    color: #D41B2C;
+}
+
+.sidebar-nav__item--active {
+    border-left: 2px solid #000;
+    color: #000;
+}
+
+.sidebar-nav__item a {
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+}
+
+/* ---------- HEADER ---------- */
+
+.primary-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px;
+}
+
+.primary-header * {
+    margin: 0;
+}
+
+.primary-header__inner {
+    display: flex;
+}
+
+/* ---------- PROFILE SECTION ---------- */
+
+.profile-section {
+    flex: 1;
+    display: flex;
+    margin: 0 24px 4em 24px;
+}
+
+.profile-section__main {
+    flex: 1;
+}
+
+.profile-section .form-label {
+    font-weight: bold;
+}
+
+.edit-profile-form {}
+
+.edit-profile-form__section {
+    margin-bottom: 2em;
+}
+
+/* ---------- DASHBOARD SECTION ---------- */
+
+.dashboard-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px 4em 24px;
+}
+
+.dashboard-card-wrapper {
+    max-width: 1130px;
+    gap: 30px;
+}
+
+.dashboard-card {
+    width: 260px;
+}
+
+.dashboard-card .card-header {
+    height: 10em;
+}
+
+.dashboard-card a {
+    text-decoration: none;
+}
+
+.dashboard-card__title {
+    font-size: 1em;
+    color: #D41B2C;
+}
+
+.dashboard-card__subtitle {
+    font-size: 1.1em;
+    color: #677179;
+}
+
+.dashboard-card__term {
+    font-size: 0.8em;
+    color: #677179;
+}
+
+.dashboard-card__icon {
+    color: #D41B2C;
+}
+
+/* ---------- HOME SECTION ---------- */
+
+.home-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px 4em 24px;
+    gap: 1em;
+}
+
+.home-section__main {
+    flex: 1;
+}
+
+.module-group__link-icon {
+    position: absolute;
+    left: 3em;
+    top: 12px;
+}
+
+.home-sidebar-section {
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px 0 0;
+    max-width: 256px;
+}
