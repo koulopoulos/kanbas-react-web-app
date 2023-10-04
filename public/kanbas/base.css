@@ -28,6 +28,11 @@ a {
     color: #D41B2C !important;
 }
 
+.kanbas-link--inherit {
+    text-decoration: none;
+    color: inherit !important;
+}
+
 .kanbas-link:hover {
     text-decoration: underline;
 }
@@ -56,6 +61,10 @@ a {
     background: #f5f5f5;
 }
 
+.list-group-item--border-start-success {
+    border-left: 0.4em solid #198754;
+}
+
 /* Source: https://stackoverflow.com/a/31271393 */
 
 .list-group-collapse li > ul li:first-child {
@@ -81,6 +90,16 @@ a {
     max-width: 85px;
     min-width: 85px;
     z-index: 9999;
+}
+
+.primary-nav__logo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    background: url('https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
 }
 
 .primary-nav__list {
@@ -157,26 +176,38 @@ a {
     padding: 1em;
 }
 
-.mobile-navbar__dropdown {
+.mobile-primary-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    z-index: 9999;
+    padding: 3em;
+}
+
+.mobile-sidebar-nav {
     position: relative;
     background-color: #FFF;
     border: none;
     border-radius: 0;
 }
 
-.mobile-navbar .navbar-toggler:not(.collapsed) .collapsed-hidden {
+.mobile-navbar .sidebar-nav-toggler:not(.collapsed) .collapsed-hidden {
     display: block;
 }
 
-.mobile-navbar .navbar-toggler.collapsed .collapsed-hidden {
+.mobile-navbar .sidebar-nav-toggler.collapsed .collapsed-hidden {
     display: none;
 }
 
-.mobile-navbar .navbar-toggler:not(.collapsed) .collapsed-visible {
+.mobile-navbar .sidebar-nav-toggler:not(.collapsed) .collapsed-visible {
     display: none;
 }
 
-.mobile-navbar .navbar-toggler.collapsed .collapsed-visible {
+.mobile-navbar .sidebar-nav-toggler.collapsed .collapsed-visible {
     display: block;
 }
 
@@ -263,6 +294,20 @@ a {
     margin-bottom: 2em;
 }
 
+.profile-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+.profile-image-wrapper i {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
 /* ---------- DASHBOARD SECTION ---------- */
 
 .dashboard-section {
@@ -325,12 +370,43 @@ a {
 .module-group__link-icon {
     position: absolute;
     left: 3em;
-    top: 12px;
+    top: 1.2em;
 }
 
 .home-sidebar-section {
     display: flex;
     flex-direction: column;
-    margin: 0 24px 0 0;
-    max-width: 256px;
+    padding: 0 24px 0 0;
+    max-width: 20em;
+}
+
+/* ---------- ASSIGNMENTS SECTION ---------- */
+
+.assignments-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 4em 24px;
+    gap: 1em;
+}
+
+/* ---------- ASSIGNMENTS SECTION ---------- */
+
+.edit-assignment-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 4em 24px;
+    gap: 1em;
+}
+
+/* ---------- GRADES SECTION ---------- */
+
+.grades-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 4em 24px;
+    gap: 1em;
+    max-width: 100%;
 }

@@ -10,6 +10,7 @@
     </head>
     <body>
         <nav class="primary-nav d-none d-md-block">
+            <div class="primary-nav__logo"></div>
             <ul class="primary-nav__list">
                 <li class="primary-nav__item">
                     <a href="/kanbas/profile/">
@@ -89,64 +90,143 @@
         <div class="main-wrapper">
             <div class="mobile-navbar d-md-none d-lg-none d-xl-none dropdown">
                 <div class="mobile-navbar__inner">
-                    <i class="fa-solid fa-bars fa-lg"></i>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilePrimaryNavDropdown" aria-controls="mobilePrimaryNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </button>
                     <span class="text-center">CS4550.19753.202410<br>Home</span>
-                    <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNavbarDropdown" aria-controls="mobileNavbarDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <button class="navbar-toggler sidebar-nav-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSidebarNavDropdown" aria-controls="mobileSidebarNavDropdown" aria-expanded="false" aria-label="Toggle sidebar navigation">
                         <i class="fa-solid fa-angle-down fa-lg collapsed-visible"></i>
                         <i class="fa-solid fa-x fa-lg collapsed-hidden"></i>
                     </button>
                 </div>
-                <ul class="mobile-navbar__dropdown dropdown-menu collapse" id="mobileNavbarDropdown">
-                    <ul class="kanbas-list">
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="/kanbas/home.html" class="kanbas-link">Home</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Modules</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Piazza</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Zoom Meetings</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="/kanbas/assignments/index.html" class="kanbas-link">Assignments</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Quizzes</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="/kanbas/grades.html" class="kanbas-link">Grades</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">People</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Panopto Video</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Discussions</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Announcements</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Pages</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Files</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Rubrics</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Outcomes</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Collaborations</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Syllabus</a></li>
-                        <li class="mobile-navbar__dropdown-item">
-                            <a href="#" class="kanbas-link">Settings</a></li>
+                <div class="mobile-primary-nav dropdown-menu collapse" id="mobilePrimaryNavDropdown">
+                    <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#mobilePrimaryNavDropdown" aria-controls="mobilePrimaryNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-x"></i>
+                    </button>
+                    <ul class="kanbas-list" id="mobilePrimaryNavDropdown">
+                        <li class="primary-nav__item">
+                            <a href="/kanbas/profile/">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-user fa-2xl"></i>
+                                    <span>Account</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="primary-nav__item">
+                            <a href="/kanbas/dashboard.html">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-gauge"></i>
+                                    <span>Dashboard</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="/kanbas/home.html">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-book"></i>
+                                    <span>Courses</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-regular fa-calendar"></i>
+                                    Calendar
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-inbox"></i>
+                                    Inbox
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-regular fa-clock"></i>
+                                    History
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-play"></i>
+                                    Studio
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-arrow-right"></i>
+                                    Commons
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-regular fa-circle-question"></i>
+                                    Help
+                                </div>
+                            </a>
+                        </li>
                     </ul>
+                </div>
+                <ul class="mobile-sidebar-nav dropdown-menu collapse kanbas-list" id="mobileSidebarNavDropdown">
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="/kanbas/home.html" class="kanbas-link">Home</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Modules</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Piazza</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Zoom Meetings</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="/kanbas/assignments/index.html" class="kanbas-link">Assignments</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Quizzes</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="/kanbas/grades.html" class="kanbas-link">Grades</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">People</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Panopto Video</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Discussions</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Announcements</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Pages</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Files</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Rubrics</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Outcomes</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Collaborations</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Syllabus</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Settings</a></li>
                 </ul>
             </div>
             <header class="primary-header">
                 <div class="primary-header__inner">
-                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="fs-5">
                         <ol class="breadcrumb">
                             <li class="breadcrumb-item">
                                 <a href="/kanbas/home.html" class="kanbas-link">
                                     CS4550.19753.202410
                                 </a>
                             </li>
-                            <li class="breadcrumb-item active" aria-current="page">Home</li>
+                            <li class="breadcrumb-item active text-dark" aria-current="page">Home</li>
                         </ol>
                     </nav>
                 </div>
@@ -196,34 +276,37 @@
                 <section class="home-section">
                     <div>
                         <div class="float-end">
-                            <button class="btn btn-secondary">Collapse All</button>
-                            <button class="btn btn-secondary">View Progress</button>
+                            <button class="btn btn-secondary rounded-1">Collapse All</button>
+                            <button class="btn btn-secondary rounded-1">View Progress</button>
 
                             <div class="dropdown d-inline">
-                                <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn btn-secondary rounded-1 dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fa-regular fa-circle-check me-1"></i> Publish All
                                 </button>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item" href="#">Publish All</a></li>
                                 </ul>
                             </div>
-                            <button class="btn btn-danger">Module</button>
+                            <button class="btn btn-danger rounded-1">Module</button>
+                            <button class="btn btn-secondary border rounded-1">
+                                <i class="fa fa-ellipsis-vertical"></i>
+                            </button>
                         </div>
                     </div>
                     <hr>
-                    <ul class="list-group list-group-collapse module-group">
-                        <li class="list-group-item list-group-item-secondary">
+                    <ul class="list-group list-group-collapse module-group rounded-0">
+                        <li class="list-group-item list-group-item-secondary p-3">
                             <i class="fa-solid fa-grip-vertical pe-3"></i>
-                            Week 0 - INTRO
+                            <span class="text-dark">Week 0 - INTRO</span>
                             <div class="float-end">
                                 <i class="fa-solid fa-circle-check text-success me-3"></i>
-                                <i class="fa-solid fa-plus me-3"></i>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                                <i class="fa-solid fa-plus text-secondary me-3"></i>
+                                <i class="fa-solid fa-ellipsis-vertical text-secondary"></i>
                             </div>
                         </li>
                         <li class="list-group-item">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item p-3">
                                     <i class="fa-solid fa-grip-vertical pe-3"></i>
                                     LEARNING OBJECTIVES
                                     <div class="float-end">
@@ -233,7 +316,7 @@
                                 </li>
                                 <li class="list-group-item list-group-item--sublist">
                                     <ul>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Introduction to the course
                                             <div class="float-end">
@@ -241,7 +324,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Learn what is Web Development
                                             <div class="float-end">
@@ -249,7 +332,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Creating a development environment
                                             <div class="float-end">
@@ -257,7 +340,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Creating a Web Application
                                             <div class="float-end">
@@ -265,7 +348,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Getting started with the 1st assignment
                                             <div class="float-end">
@@ -275,7 +358,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item p-3">
                                     <i class="fa-solid fa-grip-vertical pe-3"></i>
                                     READING
                                     <div class="float-end">
@@ -285,7 +368,7 @@
                                 </li>
                                 <li class="list-group-item list-group-item--sublist">
                                     <ul>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Full Stack Developer - Chapter 1 - Introduction
                                             <div class="float-end">
@@ -293,7 +376,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML
                                             <div class="float-end">
@@ -303,7 +386,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item p-3">
                                     <i class="fa-solid fa-grip-vertical pe-3"></i>
                                     SLIDES
                                     <div class="float-end">
@@ -313,7 +396,7 @@
                                 </li>
                                 <li class="list-group-item list-group-item--sublist">
                                     <ul class="list-group">
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             <a href="#" class="kanbas-link">
                                                 <i class="fa-solid fa-link text-danger module-group__link-icon"></i>
@@ -324,7 +407,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             <a href="#" class="kanbas-link">
                                                 <i class="fa-solid fa-link text-danger module-group__link-icon"></i>
@@ -335,7 +418,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             <a href="#" class="kanbas-link">
                                                 <i class="fa-solid fa-link text-danger module-group__link-icon"></i>
@@ -352,8 +435,8 @@
                         </li>
                     </ul>
                     <br/><br/>
-                    <ul class="list-group list-group-collapse">
-                        <li class="list-group-item list-group-item-secondary">
+                    <ul class="list-group list-group-collapse rounded-0">
+                        <li class="list-group-item list-group-item-secondary p-3">
                             <i class="fa-solid fa-grip-vertical pe-3"></i>
                             Week 1 - HTML
                             <div class="float-end">
@@ -364,7 +447,7 @@
                         </li>
                         <li class="list-group-item">
                             <ul class="list-group">
-                                <li class="list-group-item">
+                                <li class="list-group-item p-3">
                                     <i class="fa-solid fa-grip-vertical pe-3"></i>
                                     LEARNING OBJECTIVES
                                     <div class="float-end">
@@ -374,7 +457,7 @@
                                 </li>
                                 <li class="list-group-item list-group-item--sublist">
                                     <ul>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Learn how to create user interfaces with HTML
                                             <div class="float-end">
@@ -382,7 +465,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Keep working on assignment 1
                                             <div class="float-end">
@@ -390,7 +473,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Deploy the assignment to Netlify
                                             <div class="float-end">
@@ -400,7 +483,7 @@
                                         </li>
                                     </ul>
                                 </li>
-                                <li class="list-group-item">
+                                <li class="list-group-item p-3">
                                     <i class="fa-solid fa-grip-vertical pe-3"></i>
                                     READING
                                     <div class="float-end">
@@ -410,7 +493,7 @@
                                 </li>
                                 <li class="list-group-item list-group-item--sublist">
                                     <ul class="list-group">
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Full Stack Developer - Chapter 1 - Introduction
                                             <div class="float-end">
@@ -418,7 +501,7 @@
                                                 <i class="fa-solid fa-ellipsis-vertical"></i>
                                             </div>
                                         </li>
-                                        <li class="list-group-item">
+                                        <li class="list-group-item p-3">
                                             <i class="fa-solid fa-grip-vertical pe-5"></i>
                                             Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML
                                             <div class="float-end">
@@ -432,10 +515,10 @@
                         </li>
                     </ul>
                 </section>
-                <section class="home-sidebar-section d-none d-xl-block w-25">
+                <section class="home-sidebar-section d-none d-xl-block">
                     <h2 class="fs-6">Course Status</h2>
                     <div class="d-flex mb-4">
-                        <button class="btn btn-light rounded-0 flex-1">
+                        <button class="btn btn-light rounded-0 border flex-1">
                             <i class="fa-solid fa-ban text-danger me-1"></i>
                             Unpublish
                         </button>
@@ -447,7 +530,7 @@
                     <ul class="kanbas-list d-flex flex-column mb-4">
                         <li class="mb-2">
                             <a href="#">
-                                <button class="btn btn-light w-100 text-start">
+                                <button class="btn btn-light w-100 text-start border">
                                     <i class="fa-solid fa-file-import"></i>
                                     Import Existing Content
                                 </button>
@@ -455,7 +538,7 @@
                         </li>
                         <li class="mb-2">
                             <a href="#">
-                                <button class="btn btn-light w-100 text-start">
+                                <button class="btn btn-light w-100 text-start border">
                                     <i class="fa-solid fa-circle-arrow-right"></i>
                                     Import From Commons
                                 </button>
@@ -463,7 +546,7 @@
                         </li>
                         <li class="mb-2">
                             <a href="#">
-                                <button class="btn btn-light w-100 text-start">
+                                <button class="btn btn-light w-100 text-start border">
                                     <i class="fa-solid fa-crosshairs"></i>
                                     Choose Home Page
                                 </button>
@@ -471,7 +554,7 @@
                         </li>
                         <li class="mb-2">
                             <a href="#">
-                                <button class="btn btn-light w-100 text-start">
+                                <button class="btn btn-light w-100 text-start border">
                                     <i class="fa-solid fa-chart-column"></i>
                                     View Course Stream
                                 </button>
@@ -479,7 +562,7 @@
                         </li>
                         <li class="mb-2">
                             <a href="#">
-                                <button class="btn btn-light w-100 text-start">
+                                <button class="btn btn-light w-100 text-start border">
                                     <i class="fa-solid fa-bullhorn"></i>
                                     New Announcement
                                 </button>
@@ -487,7 +570,7 @@
                         </li>
                         <li class="mb-2">
                             <a href="#">
-                                <button class="btn btn-light w-100 text-start">
+                                <button class="btn btn-light w-100 text-start border">
                                     <i class="fa-solid fa-chart-column"></i>
                                     New Analytics
                                 </button>
@@ -495,7 +578,7 @@
                         </li>
                         <li class="mb-2">
                             <a href="#">
-                                <button class="btn btn-light w-100 text-start">
+                                <button class="btn btn-light w-100 text-start border">
                                     <i class="fa-solid fa-bell"></i>
                                     View Course Notifications
                                 </button>
@@ -505,7 +588,7 @@
                     <div class="d-flex justify-content-between">
                         <h2 class="fw-bold fs-6">Coming Up</h2>
                         <a href="#" class="kanbas-link">
-                            <i class="fa-solid fa-calendar"></i>
+                            <i class="fa-solid fa-calendar me-1"></i>
                             View Calendar
                         </a>
                     </div>
@@ -536,209 +619,5 @@
                 </section>
             </main>
         </div>
-        <!-- <table>
-            <tbody>
-                <tr>
-                    <td valign="top">
-                        <ul class="main-sidebar__list">
-                            <li class="main-sidebar__item">
-                                <a href="/kanbas/profile/index.html">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-user fa-2xl main-sidebar__account-icon"></i>
-                                        <span>Account</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="#">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-gauge"></i>
-                                        <span>Dashboard</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="/kanbas/courses.html">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-book"></i>
-                                        <span>Courses</span>
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="#">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-regular fa-calendar"></i>
-                                        Calendar
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="#">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-inbox"></i>
-                                        Inbox
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="#">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-regular fa-clock"></i>
-                                        History
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="#">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-play"></i>
-                                        Studio
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="#">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-arrow-right"></i>
-                                        Commons
-                                    </div>
-                                </a>
-                            </li>
-                            <li class="main-sidebar__item">
-                                <a href="#">
-                                    <div class="main-sidebar__item-content">
-                                        <i class="fa fa-2xl fa-regular fa-circle-question"></i>
-                                        Help
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </td>
-                    <td valign="top">
-                        <ul>
-                            <li><a href="/kanbas/home.html">Home</a></li>
-                            <li><a href="#">Modules</a></li>
-                            <li><a href="#">Piazza</a></li>
-                            <li><a href="#">Zoom Meetings</a></li>
-                            <li><a href="/kanbas/assignments/index.html">Assignments</a></li>
-                            <li><a href="#">Quizzes</a></li>
-                            <li><a href="/kanbas/grades.html">Grades</a></li>
-                            <li><a href="#">People</a></li>
-                            <li><a href="#">Panopto Video</a></li>
-                            <li><a href="#">Discussions</a></li>
-                            <li><a href="#">Announcements</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li><a href="#">Files</a></li>
-                            <li><a href="#">Rubrics</a></li>
-                            <li><a href="#">Outcomes</a></li>
-                            <li><a href="#">Collaborations</a></li>
-                            <li><a href="#">Syllabus</a></li>
-                            <li><a href="#">Settings</a></li>
-                        </ul>
-                    </td>
-                    <td valign="top">
-                        <table>
-                            <tr>
-                                <td>
-                                    <button>Collapse All</button>
-                                </td>
-                                <td>
-                                    <button>View Progress</button>
-                                </td>
-                                <td>
-                                    <select id="select-publish">
-                                        <option selected value="PUBALL">
-                                            Publish All</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <button>Module</button>
-                                </td>
-                            </tr>
-                        </table>
-                        <ul>
-                            <li>
-                                Week 0 - INTRO
-                                <ul>
-                                    <li>
-                                        LEARNING OBJECTIVES
-                                        <ul>
-                                            <li>Introduction to the course</li>
-                                            <li>Learn what is Web Development</li>
-                                            <li>Creating a development environment</li>
-                                            <li>Creating a Web Application</li>
-                                            <li>Getting started with the 1st assignment</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        READING
-                                        <ul>
-                                            <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                            <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        SLIDES
-                                        <ul>
-                                            <li><a href="#">Introduction to Web Development Links to an external site.</a></li>
-                                            <li><a href="#">Creating an HTTP server with Node.js Links to an external site.</a></li>
-                                            <li><a href="#">Creating a React Application Links to an external site.</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                Week 1 - HTML
-                                <ul>
-                                    <li>
-                                        LEARNING OBJECTIVES
-                                        <ul>
-                                            <li>Learn how to create user interfaces with HTML</li>
-                                            <li>Keep working on assignment 1</li>
-                                            <li>Deploy the assignment to Netlify</li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        READING
-                                        <ul>
-                                            <li>Full Stack Developer - Chapter 1 - Introduction</li>
-                                            <li>Full Stack Developer - Chapter 2 - Creating User Interfaces With HTML</li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </td>
-                    <td valign="top">
-                        <h2>Course Status</h2>
-                        <table>
-                            <tbody>
-                                <tr>
-                                    <td><button>Unpublish</button></td>
-                                    <td><button>Published</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <ul>
-                            <li><a href="#">Import Existing Content</a></li>
-                            <li><a href="#">Import From Commons</a></li>
-                            <li><a href="#">Choose Home Page</a></li>
-                            <li><a href="#">View Course Stream</a></li>
-                            <li><a href="#">New Announcement</a></li>
-                            <li><a href="#">New Analytics</a></li>
-                            <li><a href="#">View Course Notifications</a></li>
-                        </ul>
-                        <h2>Comming Up</h2>
-                        <a href="#">View Calendar</a>
-                        <ul>
-                            <li><a href="#">Lecture CS4550.12631.202410 Sep 7 at 11:45am</a></li>
-                            <li><a href="#">Lecture CS4550.12631.202410 Sep 11 at 11:45am</a></li>
-                            <li><a href="#">Lecture CS5610 06 SP23 Lecture Sep 11 at 6pm</a></li>
-                        </ul>
-                    </td>
-                </tr>
-            </tbody>
-        </table> -->
     </body>
 </html>

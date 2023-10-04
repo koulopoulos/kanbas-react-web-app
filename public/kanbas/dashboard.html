@@ -6,9 +6,11 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"/>
         <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.2/css/all.css" rel="stylesheet">
         <link rel="stylesheet" href="./base.css"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     </head>
     <body>
         <nav class="primary-nav d-none d-md-block">
+            <div class="primary-nav__logo"></div>
             <ul class="primary-nav__list">
                 <li class="primary-nav__item">
                     <a href="/kanbas/profile/">
@@ -86,6 +88,135 @@
         </nav>
         <div class="primary-nav-padding d-none d-md-block"></div>
         <div class="main-wrapper">
+            <div class="mobile-navbar d-md-none d-lg-none d-xl-none dropdown">
+                <div class="mobile-navbar__inner">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobilePrimaryNavDropdown" aria-controls="mobilePrimaryNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa-solid fa-bars fa-lg"></i>
+                    </button>
+                    <span class="text-center">CS4550.19753.202410<br>Home</span>
+                    <button class="navbar-toggler sidebar-nav-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#mobileSidebarNavDropdown" aria-controls="mobileSidebarNavDropdown" aria-expanded="false" aria-label="Toggle sidebar navigation">
+                        <i class="fa-solid fa-angle-down fa-lg collapsed-visible"></i>
+                        <i class="fa-solid fa-x fa-lg collapsed-hidden"></i>
+                    </button>
+                </div>
+                <div class="mobile-primary-nav dropdown-menu collapse" id="mobilePrimaryNavDropdown">
+                    <button class="navbar-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#mobilePrimaryNavDropdown" aria-controls="mobilePrimaryNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fa fa-x"></i>
+                    </button>
+                    <ul class="kanbas-list" id="mobilePrimaryNavDropdown">
+                        <li class="primary-nav__item">
+                            <a href="/kanbas/profile/">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-user fa-2xl"></i>
+                                    <span>Account</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="primary-nav__item">
+                            <a href="/kanbas/dashboard.html">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-gauge"></i>
+                                    <span>Dashboard</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="/kanbas/home.html">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-book"></i>
+                                    <span>Courses</span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-regular fa-calendar"></i>
+                                    Calendar
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-inbox"></i>
+                                    Inbox
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-regular fa-clock"></i>
+                                    History
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-play"></i>
+                                    Studio
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-arrow-right"></i>
+                                    Commons
+                                </div>
+                            </a>
+                        </li>
+                        <li class="mobile-primary-nav__item">
+                            <a href="#">
+                                <div class="mobile-primary-nav__item-content">
+                                    <i class="fa fa-2xl fa-regular fa-circle-question"></i>
+                                    Help
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="mobile-sidebar-nav dropdown-menu collapse kanbas-list" id="mobileSidebarNavDropdown">
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="/kanbas/home.html" class="kanbas-link">Home</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Modules</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Piazza</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Zoom Meetings</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="/kanbas/assignments/index.html" class="kanbas-link">Assignments</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Quizzes</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="/kanbas/grades.html" class="kanbas-link">Grades</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">People</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Panopto Video</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Discussions</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Announcements</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Pages</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Files</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Rubrics</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Outcomes</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Collaborations</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Syllabus</a></li>
+                    <li class="mobile-sidebar-nav__dropdown-item">
+                        <a href="#" class="kanbas-link">Settings</a></li>
+                </ul>
+            </div>
             <header class="primary-header">
                 <div class="primary-header__inner">
                     <h1>Dashboard</h1>
@@ -93,8 +224,9 @@
                 <hr/>
             </header>
             <main class="main">
-                <section class="dashboard-section">
-                    <h2>Published Courses (7)</h2>
+                <section class="dashboard-section p-2">
+                    <h2 class="fs-3">Published Courses (7)</h2>
+                    <hr/>
                     <div class="d-flex flex-row flex-wrap dashboard-card-wrapper">
                         <div class="card dashboard-card">
                             <a href="/kanbas/home.html">
