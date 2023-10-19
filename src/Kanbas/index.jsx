@@ -27,10 +27,10 @@ function Kanbas() {
       <div className="main-wrapper">
         <MobileNavigation sidebarLinks={sidebarLinks} />
         <Routes>
-          <Route index element={<Navigate to="Dashboard" />} />
-          <Route path="Profile" element={<Profile />} />
-          <Route path="Dashboard" element={<Dashboard />} />
-          <Route path="Courses">
+          <Route index element={<Navigate to="dashboard" />} />
+          <Route path="profile" element={<Profile />} />
+          <Route path="dashboard" element={<Dashboard />} />
+          <Route path="courses">
             <Route index element={<Navigate to={defaultCourseId} />} />
             <Route path=":courseId/*" element={<Courses />} />
           </Route>
