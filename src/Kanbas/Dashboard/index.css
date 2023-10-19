@@ -1,0 +1,44 @@
+/* ---------- DASHBOARD SECTION ---------- */
+
+.dashboard-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px 4em 24px;
+}
+
+.dashboard-card-wrapper {
+    max-width: 1130px;
+    gap: 30px;
+}
+
+.dashboard-card {
+    width: 260px;
+}
+
+.dashboard-card .card-header {
+    height: 10em;
+}
+
+.dashboard-card a {
+    text-decoration: none;
+}
+
+.dashboard-card__title {
+    font-size: 1em;
+    color: #D41B2C;
+}
+
+.dashboard-card__subtitle {
+    font-size: 1.1em;
+    color: #677179;
+}
+
+.dashboard-card__term {
+    font-size: 0.8em;
+    color: #677179;
+}
+
+.dashboard-card__icon {
+    color: #D41B2C;
+}

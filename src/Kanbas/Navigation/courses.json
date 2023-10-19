@@ -1,0 +1,20 @@
+[
+    { "name": "Home", "route": "home" },
+    { "name": "Modules", "route": "modules" },
+    { "name": "Piazza", "route": "" },
+    { "name": "Zoom Meetings", "route": "" },
+    { "name": "Assignments", "route": "assignments" },
+    { "name": "Quizzes", "route": "" },
+    { "name": "Grades", "route": "grades" },
+    { "name": "People", "route": "" },
+    { "name": "Panopto Video", "route": "" },
+    { "name": "Discussions", "route": "" },
+    { "name": "Announcements", "route": "" },
+    { "name": "Pages", "route": "" },
+    { "name": "Files", "route": "" },
+    { "name": "Rubrics", "route": "" },
+    { "name": "Outcomes", "route": "" },
+    { "name": "Collaborations", "route": "" },
+    { "name": "Syllabus", "route": "" },
+    { "name": "Settings", "route": "" }
+]

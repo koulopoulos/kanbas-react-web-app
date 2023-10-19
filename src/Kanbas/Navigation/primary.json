@@ -1,0 +1,38 @@
+[
+    {
+      "name": "Account",
+      "route": "profile"
+    },
+    {
+      "name": "Dashboard",
+      "route": "dashboard"
+    },
+    {
+      "name": "Courses",
+      "route": "courses"
+    },
+    {
+      "name": "Calendar",
+      "route": "#"
+    },
+    {
+      "name": "Inbox",
+      "route": "#"
+    },
+    {
+      "name": "History",
+      "route": "#"
+    },
+    {
+      "name": "Studio",
+      "route": "#"
+    },
+    {
+      "name": "Commons",
+      "route": "#"
+    },
+    {
+      "name": "Help",
+      "route": "#"
+    }
+]

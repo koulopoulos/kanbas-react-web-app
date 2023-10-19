@@ -1,0 +1,98 @@
+html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+}
+
+a {
+    color: #D41B2C !important;
+}
+
+/* ---------- UTILS ---------- */
+
+.overflow-ellipses {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.kanbas-link {
+    text-decoration: none;
+    color: #D41B2C !important;
+}
+
+.kanbas-link--inherit {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+.kanbas-link:hover {
+    text-decoration: underline;
+}
+
+.kanbas-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+/* ---------- BOOTSTRAP OVERRIDES ---------- */
+
+/* .list-group-item--sublist li {
+padding-left: 2em;
+} */
+
+.list-group-item {
+    overflow: hidden;
+}
+
+.list-group-item--header {
+    background: #f5f5f5;
+}
+
+.list-group-item--border-start-success {
+    border-left: 0.4em solid #198754 !important;
+}
+
+/* Source: https://stackoverflow.com/a/31271393 */
+
+.list-group-collapse li > ul li:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-collapse li > ul {
+    padding: 0;
+    margin-left: -17px;
+    margin-right: -17px;
+    margin-top: -11px;
+    margin-bottom: -9px;
+}
+
+.breadcrumb {
+    margin: 0 !important;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+
+.main-wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+  
+.main {
+    display: flex;
+    flex-direction: row;
+}

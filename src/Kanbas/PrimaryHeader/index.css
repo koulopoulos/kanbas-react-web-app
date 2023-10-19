@@ -1,0 +1,16 @@
+/* ---------- HEADER ---------- */
+
+.primary-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px;
+}
+
+.primary-header * {
+    margin: 0;
+}
+
+.primary-header__inner {
+    display: flex;
+}

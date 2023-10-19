@@ -1,0 +1,26 @@
+/* ---------- HOME SECTION ---------- */
+
+.home-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    margin: 0 24px 4em 24px;
+    gap: 1em;
+}
+
+.home-section__main {
+    flex: 1;
+}
+
+.module-group__link-icon {
+    position: absolute;
+    left: 3em;
+    top: 1.2em;
+}
+
+.home-sidebar-section {
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 0 0;
+    max-width: 20em;
+}

@@ -1,0 +1,17 @@
+/* ---------- ASSIGNMENTS SECTION ---------- */
+
+.assignments-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 4em 24px;
+    gap: 1em;
+}
+
+.edit-assignment-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 24px 4em 24px;
+    gap: 1em;
+}

@@ -1,0 +1,146 @@
+/* ---------- PRIMARY NAVIGATION ---------- */
+
+.primary-nav {
+    position: fixed;
+    min-height: 100vh;
+    height: auto;
+    background: #000;
+    max-width: 85px;
+    min-width: 85px;
+    z-index: 9999;
+}
+
+.primary-nav__logo {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    background: url('https://instructure-uploads.s3.amazonaws.com/account_145230000000000001/attachments/949/NU_MonoLVX_RGB_RW.png');
+    background-size: 100%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.primary-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 85px;
+    background: #000;
+}
+
+.primary-nav__item {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.primary-nav__item--active {
+    background: #FFF;
+}
+
+.primary-nav__item a {
+    text-decoration: none;
+}
+
+.primary-nav__item svg {
+    font-size: 2em;
+    line-height: 1;
+    color: #D41B2C;
+}
+
+.primary-nav__item .primary-nav__account-icon {
+    color: #FFFFFF;
+}
+
+.primary-nav__item--active .primary-nav__account-icon {
+    color: #D41B2C;
+}
+
+.primary-nav__item-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    color: #FFF;
+    font-weight: 200;
+    padding: 8px;
+    font-size: 0.85em;
+}
+
+.primary-nav__item--active .primary-nav__item-content {
+    color: #D41B2C;
+}
+
+.primary-nav-padding {
+    max-width: 85px;
+    width: 85px;
+    min-width: 85px;
+}
+
+/* ---------- SIDEBAR NAVIGATION ---------- */
+
+.sidebar-nav {
+    max-width: 200px;
+    min-width: 190px;
+}
+
+.sidebar-nav__list {
+    list-style: none;
+    padding: 0;
+    margin: 0 24px;
+}
+
+.sidebar-nav__item {
+    list-style: none;
+    padding: 9px 0 9px 9px;
+    margin: 0;
+    color: #D41B2C;
+}
+
+.sidebar-nav__item--active {
+    border-left: 2px solid #000;
+    color: #000;
+}
+
+.sidebar-nav__item a {
+    text-decoration: none;
+    color: inherit;
+    text-align: left;
+}
+
+/* ---------- MOBILE NAVIGATION ---------- */
+
+.mobile-navbar {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    color: #FFF;
+}
+
+.mobile-navbar__inner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.mobile-primary-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    z-index: 9999;
+    padding: 3em;
+}
+
+.mobile-sidebar-nav {
+    position: relative;
+    background-color: #FFF;
+    border: none;
+    border-radius: 0;
+}

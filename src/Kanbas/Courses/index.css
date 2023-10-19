@@ -1,0 +1,21 @@
+/* ---------- HEADER ---------- */
+
+.course-header {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px;
+}
+
+.course-header * {
+    margin: 0;
+}
+
+.course-header__inner {
+    display: flex;
+}
+
+/* https://stackoverflow.com/a/69175923 */
+.breadcrumb-item + .breadcrumb-item::before {
+    content: var(--bs-breadcrumb-divider, ">") !important;
+}

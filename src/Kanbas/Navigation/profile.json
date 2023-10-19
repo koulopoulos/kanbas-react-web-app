@@ -1,0 +1,11 @@
+[
+    { "name": "Notifications", "route": "" },
+    { "name": "Profile", "route": "profile" },
+    { "name": "Files", "route": "" },
+    { "name": "Settings", "route": "" },
+    { "name": "ePortfolios", "route": "" },
+    { "name": "Shared Content", "route": "" },
+    { "name": "The Hub", "route": "" },
+    { "name": "Qwickly Course Tools", "route": "" },
+    { "name": "Global Announcements", "route": "" }
+]
