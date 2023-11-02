@@ -2,7 +2,7 @@ import ModuleButtons from "./ModuleButtons";
 import ModuleList from "./ModuleList";
 import "./index.css";
 
-function Modules({ modules }) {
+function Modules() {
   return (
     <>
       <section className="module-section">
@@ -12,7 +12,7 @@ function Modules({ modules }) {
           </div>
         </div>
         <hr />
-        <ModuleList modules={modules} />
+        <ModuleList />
       </section>
     </>
   );

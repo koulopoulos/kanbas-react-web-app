@@ -9,15 +9,13 @@ import CourseNavigation from "./CourseNavigation";
 import CourseHeader from "./CourseHeader";
 import Home from "./Home";
 import Modules from "./Modules";
-import db from "../Database";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/AssignmentEditor";
 
-function Courses() {
+function Courses({ courses }) {
   const { pathname } = useLocation();
   const { courseId } = useParams();
-  const course = db.getCourseById(courseId);
-  const modules = db.getModulesByCourseId(courseId);
+  const course = courses.find((course) => course._id === courseId);
 
   return (
     <>
@@ -30,11 +28,8 @@ function Courses() {
         <CourseNavigation />
         <Routes>
           <Route index element={<Navigate to="home" />} />
-          <Route
-            path="home"
-            element={<Home course={course} modules={modules} />}
-          />
-          <Route path="modules" element={<Modules modules={modules} />} />
+          <Route path="home" element={<Home course={course} />} />
+          <Route path="modules" element={<Modules />} />
           <Route path="assignments" element={<Assignments />} />
           <Route
             path="assignments/:assignmentId"

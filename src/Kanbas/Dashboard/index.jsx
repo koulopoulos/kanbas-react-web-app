@@ -1,10 +1,16 @@
-import db from "../Database";
 import "./index.css";
 import DashboardCard from "./DashboardCard";
+import AddCourseCard from "./AddCourseCard";
 import PrimaryHeader from "../PrimaryHeader";
 
-function Dashboard() {
-  const courses = db.courses;
+function Dashboard({
+  courses,
+  course,
+  setCourse,
+  addNewCourse,
+  deleteCourse,
+  updateCourse,
+}) {
   return (
     <>
       <PrimaryHeader>
@@ -16,16 +22,20 @@ function Dashboard() {
           <hr />
           <div className="d-flex flex-row flex-wrap dashboard-card-wrapper">
             {courses &&
-              courses.map((course) => (
+              courses.map((c) => (
                 <DashboardCard
-                  key={course._id}
-                  courseId={course._id}
-                  courseName={course.name}
-                  courseNumber={course.number}
-                  courseStartDate={course.startDate}
-                  courseEndDate={course.endDate}
+                  key={c._id}
+                  course={c}
+                  setCourse={setCourse}
+                  deleteCourse={deleteCourse}
                 />
               ))}
+            <AddCourseCard
+              course={course}
+              setCourse={setCourse}
+              addNewCourse={addNewCourse}
+              updateCourse={updateCourse}
+            />
           </div>
         </section>
       </main>

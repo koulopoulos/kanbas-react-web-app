@@ -3,7 +3,7 @@ import "./index.css";
 import ModuleButtons from "../Modules/ModuleButtons";
 import HomeSidebar from "./HomeSidebar";
 
-function Home({ course, modules }) {
+function Home() {
   return (
     <>
       <section className="home-section">
@@ -13,7 +13,7 @@ function Home({ course, modules }) {
           </div>
         </div>
         <hr />
-        <ModuleList modules={modules} />
+        <ModuleList />
       </section>
       <HomeSidebar />
     </>
