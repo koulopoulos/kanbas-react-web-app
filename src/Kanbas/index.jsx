@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Provider } from "react-redux";
+import axios from "axios";
 import store from "./store";
 import KanbasNavigation from "./Navigation/KanbasNavigation";
 import Dashboard from "./Dashboard";
@@ -9,14 +10,23 @@ import Courses from "./Courses";
 import coursesLinks from "./Navigation/courses.json";
 import profileLinks from "./Navigation/profile.json";
 import MobileNavigation from "./Navigation/MobileNavigation";
-import db from "./Database";
 import "./index.css";
 
 function Kanbas() {
   const { pathname } = useLocation();
-  const defaultCourseId = db.courses.at(0)?._id;
+  const [courses, setCourses] = useState([]);
 
-  const [courses, setCourses] = useState(db.courses);
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const URL = `${API_BASE}/courses`;
+
+  const findAllCourses = async () => {
+    const response = await axios.get(URL);
+    setCourses(response.data);
+  };
+
+  useEffect(() => {
+    findAllCourses();
+  }, []);
 
   const [course, setCourse] = useState({
     name: "New Course",
@@ -25,18 +35,19 @@ function Kanbas() {
     endDate: "2023-12-15",
   });
 
-  const addNewCourse = () => {
-    setCourses([
-      ...courses,
-      { ...course, _id: new Date().getTime().toString() },
-    ]);
+  const addNewCourse = async () => {
+    const response = await axios.post(URL, course);
+    setCourses([response.data, ...courses]);
   };
 
-  const deleteCourse = (courseId) => {
+  const deleteCourse = async (courseId) => {
+    const response = await axios.delete(`${URL}/${courseId}`);
     setCourses(courses.filter((course) => course._id !== courseId));
   };
 
-  const updateCourse = () => {
+  const updateCourse = async () => {
+    const response = await axios.put(`${URL}/${course._id}`, course);
+
     setCourses(
       courses.map((c) => {
         if (c._id === course._id) {
@@ -79,8 +90,8 @@ function Kanbas() {
             }
           />
           <Route path="courses">
-            <Route index element={<Navigate to={defaultCourseId} />} />
-            <Route path=":courseId/*" element={<Courses courses={courses} />} />
+            <Route index element={<Navigate to={courses?.at(0)?._id} />} />
+            <Route path=":courseId/*" element={<Courses />} />
           </Route>
         </Routes>
       </div>
