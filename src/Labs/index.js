@@ -10,6 +10,7 @@ function Labs() {
       <div className="container">
         <h1>Labs</h1>
         <Link to="a3">Assignment 3</Link>
+        <Link to="a4">Assignment 4</Link>
         <Routes>
           <Route path="/" element={<Navigate to="a4" />} />
           {/* <Route path="/" element={<Assignment3 />} /> */}
