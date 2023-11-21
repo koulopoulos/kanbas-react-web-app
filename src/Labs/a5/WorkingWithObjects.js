@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 function WorkingWithObjects() {
-  const URL = "http://localhost:4000/a5/assignment";
+  const LAB_BASE = process.env.REACT_APP_LAB_BASE;
+  const URL = `${LAB_BASE}/a5/assignment`;
   const [assignment, setAssignment] = useState({
     id: 1,
     title: "NodeJS Assignment",
@@ -32,17 +33,14 @@ function WorkingWithObjects() {
 
       <h4>Retrieving Properties</h4>
       <a
-        href="http://localhost:4000/a5/assignment/title"
+        href={`${LAB_BASE}/a5/assignment/title`}
         className="btn btn-primary me-2"
       >
         Get Title
       </a>
 
       <h4>Retrieving Objects</h4>
-      <a
-        href="http://localhost:4000/a5/assignment"
-        className="btn btn-primary me-2"
-      >
+      <a href={`${LAB_BASE}/a5/assignment`} className="btn btn-primary me-2">
         Get Assignment
       </a>
     </div>

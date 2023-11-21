@@ -4,21 +4,23 @@ function WorkingWithArrays() {
   const [todos, setTodos] = useState([]);
   const [todo, setTodo] = useState({ title: "New Todo", completed: false });
 
+  const LAB_BASE = process.env.REACT_APP_LAB_BASE;
+
   const createTodo = async () => {
     // const response = await axios.get("http://localhost:4000/a5/todos/create");
-    const response = await axios.post("http://localhost:4000/a5/todos", todo);
+    const response = await axios.post(`${LAB_BASE}/a5/todos`, todo);
     setTodos([...todos, response.data]);
   };
 
   const fetchTodos = async () => {
-    const response = await axios.get("http://localhost:4000/a5/todos");
+    const response = await axios.get(`${LAB_BASE}/a5/todos`);
     setTodos(response.data);
   };
   const deleteTodo = async (id) => {
     // const response = await axios.get(
     //   `http://localhost:4000/a5/todos/${id}/delete`
     // );
-    const response = await axios.delete(`http://localhost:4000/a5/todos/${id}`);
+    const response = await axios.delete(`${LAB_BASE}/a5/todos/${id}`);
     setTodos(
       todos.filter((todo) => {
         return todo.id !== id;
