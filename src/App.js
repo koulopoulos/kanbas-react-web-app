@@ -2,6 +2,7 @@ import Kanbas from "./Kanbas";
 import Labs from "./Labs";
 import HelloWorld from "./Labs/a3/HelloWorld";
 import { HashRouter, Routes, Route, Link } from "react-router-dom";
+import Project from "./Project";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,9 @@ function App() {
           path="/"
           element={
             <div className="list-group">
+              <Link className="list-group-item" to="/Project">
+                Project
+              </Link>
               <Link className="list-group-item" to="/Labs">
                 Labs
               </Link>
@@ -24,6 +28,7 @@ function App() {
             </div>
           }
         />
+        <Route path="/Project/*" element={<Project />} />
         <Route path="/Labs/*" element={<Labs />} />
         <Route path="/Kanbas/*" element={<Kanbas />} />
         <Route path="/Hello" element={<HelloWorld />} />

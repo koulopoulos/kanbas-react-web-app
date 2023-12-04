@@ -2,3 +2,11 @@
   width: 100%;
   display: flex;
 }
+
+a.list-group-item {
+  color: initial !important;
+}
+
+a.list-group-item.active {
+  color: #FFF !important;
+}
